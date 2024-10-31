@@ -16,13 +16,25 @@ class Navigation {
                 0 -> break
                 1 -> {
                     println("Выбрали сложение")
-                    val answer = calculator.calculator(Operations.Addition)
+                    val answer = calculator.calculate(Operations.Addition)
                     println(answer)
                 }
 
-                2 -> println("Выбрали вычитание")
-                3 -> println("Выбрали умножение")
-                4 -> println("Выбрали деление")
+                2 -> {
+                    println("Выбрали вычитание")
+                    val answer = calculator.calculate(Operations.Subtraction)
+                    println(answer)
+                }
+                3 -> {
+                    println("Выбрали умножение")
+                    val answer = calculator.calculate(Operations.Multiplication)
+                    println(answer)
+                }
+                4 -> {
+                    println("Выбрали деление")
+                    val answer = calculator.calculate(Operations.Division)
+                    println(answer)
+                }
                 null -> println("Ошибка")
                 else -> println("Такого варианта нет")
 

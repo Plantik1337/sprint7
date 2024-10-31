@@ -9,22 +9,38 @@ class Calculator {
                 "3. Умножение\n" +
                 "4. Деление\n"
 
-    fun calculator(operation: Operations): Int {
+    fun calculate(operation: Operations): Int {
 
-        val valOne = readln().toInt()
-        val valTwo = readln().toInt()
-
-
+        val valOne = getNumber()
+        val valTwo = getNumber()
 
         return when (operation) {
             Operations.Addition -> {
                 math.add(valOne, valTwo)
             }
 
-            Operations.Subtraction -> TODO()
-            Operations.Multiplication -> TODO()
-            Operations.Division -> TODO()
+            Operations.Subtraction -> {
+                math.sub(valOne, valTwo)
+            }
+            Operations.Multiplication -> {
+                math.multiply(valOne, valTwo)
+            }
+
+            Operations.Division -> {
+                math.division(valOne, valTwo).toInt()
+            }
         }
 
+    }
+
+    private fun getNumber(): Int{
+        while(true){
+            println("Введите число")
+            val number = readlnOrNull()?.toIntOrNull()
+
+            if(number == null)
+                println("Некорректное значение")
+            else return number
+        }
     }
 }
