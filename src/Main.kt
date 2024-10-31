@@ -1,4 +1,7 @@
+import calculator.Calculator
+
 fun main() {
+
     println(
         "0. Выход\n" +
                 "1. Калькулятор\n" +
@@ -11,6 +14,12 @@ fun main() {
 
             0 -> {
                 break
+            }
+
+            1 -> {
+                println("Запустили калькулятор...")
+                Navigation().startCalculator(Calculator())
+
             }
 
             null -> {
