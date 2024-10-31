@@ -4,4 +4,7 @@ class Navigation {
             println(i)
         }
     }
+    fun startCalculator(){
+
+    }
 }

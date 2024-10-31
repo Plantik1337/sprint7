@@ -1,5 +1,0 @@
-package Calculator
-
-class Calculator {
-
-}
